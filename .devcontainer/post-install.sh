@@ -35,6 +35,6 @@ echo -n "$LATEST"
 VERSION=$(getLatestVersion)
 
 cd ~
-wget https://releases.hashicorp.com/terraform/$VERSION/terraform_$VERSION_linux_amd64.zip
-unzip terraform_$VERSION_linux_amd64.zip
+wget "https://releases.hashicorp.com/terraform/"$VERSION"/terraform_"$VERSION"_linux_amd64.zip"
+unzip "terraform_"$VERSION"_linux_amd64.zip"
 sudo install terraform /usr/local/bin/
