@@ -2,7 +2,7 @@
   "name": "terraform-codespaces",
   "settings": {
     "terminal.integrated.shell.linux": "/bin/zsh",
-    "workbench.colorTheme": "Default Dark+"
+    "workbench.colorTheme": "GitHub Dark",
   },
   // Install extensions
   "extensions": [
