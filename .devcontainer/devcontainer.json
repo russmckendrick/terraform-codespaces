@@ -1,0 +1,15 @@
+{
+  "name": "terraform-codespaces",
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  // Install extensions
+  "extensions": [
+    "eamodio.gitlens",
+    "davidanson.vscode-markdownlint",
+    "hashicorp.terraform",
+    "ms-azuretools.vscode-docker"
+  ],
+  // Run Bash script in .devcontainer directory
+  "postCreateCommand": "/bin/bash ./.devcontainer/post-install.sh"
+}
