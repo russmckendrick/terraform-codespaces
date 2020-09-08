@@ -21,11 +21,8 @@ DEBIAN_FRONTEND=dialog
 
 # install terraform
 
-getLatest() {
-      LATEST_ARR=($(wget -q -O- https://api.github.com/repos/hashicorp/terraform/releases 2> /dev/null | awk '/tag_name/ {print $2}' | cut -d '"' -f 2 | cut -d 'v' -f 2))
-      ;;
-  esac
-
+getLatestVersion() {
+LATEST_ARR=($(wget -q -O- https://api.github.com/repos/hashicorp/terraform/releases 2> /dev/null | awk '/tag_name/ {print $2}' | cut -d '"' -f 2 | cut -d 'v' -f 2))
 for ver in "${LATEST_ARR[@]}"; do
   if [[ ! $ver =~ beta ]] && [[ ! $ver =~ rc ]] && [[ ! $ver =~ alpha ]]; then
     LATEST="$ver"
@@ -35,7 +32,7 @@ done
 echo -n "$LATEST"
 }
 
-VERSION=$(getLatest)
+VERSION=$(getLatestVersion)
 
 cd ~
 wget https://releases.hashicorp.com/terraform/$VERSION/terraform_$VERSION_linux_amd64.zip
