@@ -1,21 +1,9 @@
 #!/bin/sh
 
-echo "" >> ~/.bashrc
-echo ". ${PWD}/.devcontainer/.bashrc-append" >> ~/.bashrc
-
-# docker bash-completion
-sudo curl https://raw.githubusercontent.com/docker/docker-ce/master/components/cli/contrib/completion/bash/docker -o /etc/bash_completion.d/docker
-
 DEBIAN_FRONTEND=noninteractive
-# update apt-get
 sudo apt-get update
-sudo apt-get install -y --no-install-recommends apt-utils dialog
-
-# update / install utils
-sudo apt-get install -y --no-install-recommends dnsutils httpie wget unzip curl bash-completion jq
+sudo apt-get install -y --no-install-recommends apt-utils dialog dnsutils httpie wget unzip curl jq
 DEBIAN_FRONTEND=dialog
-
-# install terraform
 
 getLatestVersion() {
 LATEST_ARR=($(wget -q -O- https://api.github.com/repos/hashicorp/terraform/releases 2> /dev/null | awk '/tag_name/ {print $2}' | cut -d '"' -f 2 | cut -d 'v' -f 2))

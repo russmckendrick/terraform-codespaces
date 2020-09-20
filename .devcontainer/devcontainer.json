@@ -1,8 +1,7 @@
 {
   "name": "terraform-codespaces",
   "settings": {
-    "terminal.integrated.shell.linux": "/bin/zsh",
-    "workbench.colorTheme": "GitHub Dark",
+    "terminal.integrated.shell.linux": "/bin/zsh"
   },
   "extensions": [
     "eamodio.gitlens",
