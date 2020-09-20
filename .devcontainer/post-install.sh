@@ -1,9 +1,5 @@
 #!/bin/sh
 
-# source the bashrc-append from the repo
-# you can add project specific settings to .bashrc-append and
-# they will be added for every user that clones the repo with Codespaces
-# including keys or secrets is a SECURITY RISK
 echo "" >> ~/.bashrc
 echo ". ${PWD}/.devcontainer/.bashrc-append" >> ~/.bashrc
 

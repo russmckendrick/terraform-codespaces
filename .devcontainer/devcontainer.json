@@ -4,13 +4,11 @@
     "terminal.integrated.shell.linux": "/bin/zsh",
     "workbench.colorTheme": "GitHub Dark",
   },
-  // Install extensions
   "extensions": [
     "eamodio.gitlens",
     "davidanson.vscode-markdownlint",
     "hashicorp.terraform",
     "ms-azuretools.vscode-docker"
   ],
-  // Run Bash script in .devcontainer directory
   "postCreateCommand": "/bin/bash ./.devcontainer/post-install.sh"
 }
