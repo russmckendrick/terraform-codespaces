@@ -11,5 +11,5 @@ jobs:
       with:
         url: "http://54.179.173.106:8081/"
         user: "admin"
-        token: admin
+        token: "11628e4a93549b74b12d7069eef4966054"
         job: "test1"
