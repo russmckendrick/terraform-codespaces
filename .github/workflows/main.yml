@@ -1,4 +1,15 @@
-- name: Trigger Jenkins Job
-  # You may pin to the exact commit or the version.
-  # uses: appleboy/jenkins-action@b9936d50c66383ffb58f3504c6e1348d94425c59
-  uses: appleboy/jenkins-action@0.0.1
+name: trigger jenkins job
+on: [push]
+jobs:
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+    - name: trigger single Job
+      uses: appleboy/jenkins-action@master
+      with:
+        url: "http://54.179.173.106:8081/"
+        user: "admin"
+        token: admin
+        job: "test1"
