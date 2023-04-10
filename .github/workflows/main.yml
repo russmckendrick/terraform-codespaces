@@ -1,5 +1,5 @@
 
-- name: Jenkins-Action
+name: Jenkins-Action
   # You may pin to the exact commit or the version.
   # uses: joshlk/jenkins-githubaction@8ef510cf2dfb3affe8cbdfef1898b23c28847f39
   uses: joshlk/jenkins-githubaction@V0.0.1
