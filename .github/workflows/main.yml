@@ -1,25 +1,24 @@
-name: jenkins-CI
-
-# Controls when the workflow will run
+name: Your GHA
 on:
-  # Triggers the workflow on push or pull request events but only for the main branch
-  push:
-    branches: [ main ]
   pull_request:
-    branches: [ main ]
+    types: [opened, synchronize]
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    name: Build
+  your_job_name:
+    name: Trigger Jenkins Job
     runs-on: ubuntu-latest
     steps:
-      - name: Trigger jenkins job
-        uses: joshlk/jenkins-githubaction@master
+      - name: Trigger your-awesome-job-name job
+        uses: toptal/jenkins-job-trigger-action@master
         with:
-          url: http://54.179.173.106:8081/
-          job_name: test1
-          username: admim
-          api_token: 11628e4a93549b74b12d7069eef4966054
-          timeout: "1000"
+          jenkins_url: "http://54.179.173.106:8081/"
+          jenkins_user: "admin"
+          jenkins_token: "11628e4a93549b74b12d7069eef4966054"
+          proxy: ""
+          job_name: "test1"
+          job_params: |
+            {
+              "param_1": "value_1",
+              "param_2": "value_2"
+            }
+          job_timeout: "3600" # Default 30 sec. (optional)
