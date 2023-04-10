@@ -1,0 +1,9 @@
+{
+  "access_key": "AKIA4GTQYGIRMKQ2KKDS",
+  "secret_key": "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",
+  "region": "ap-southeast-1",
+  "key_pair_name": "jenkins-server-key",
+  "public_key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC049zV+TVqut7dEuM5Rj7HMUYXa0mhb6nqqt6sefyKGxw33AC5+KN8HHw3Jc/X72H4sjGO0+FvHnwSZVfR384x3mMvJX8owL5igAikmQTqJc4Zt1zlOvlsXzcRZvrBxzhVJRAYUaUuOH1Au7TdZQyAo3CDX3uvecdfJki3K9n69n8k3CZT6qqdOrZT4xBdGQucnblyeQXzF6UjZ1s0vh+E3xoaFKhWO8InZOdLqSEuyFZ9xhtK0Ox9eFGVz6eEF0KrQKiFNJgwj6Xa7hpr7cRV56ENEEHb3kig9Z7hGI2Tp5lKO1eXecUmLX5LGvGaak651GfbBzFqc96l8Bq1qZHPrCqYLMX3E07WBkPGzF2ldLJwsCE6KGfcas5Z3GDCv6r1m2jI69BySRjP2LWYpulKJjcF2mt2yKoLvNpFcBOZJg41B/2CZUgEj/BcLHMGIvaxVwrnwZjEvrEdZl+rbUqiLqWTjrslxTROT3cCz3vqm83jzV1GUqOI/qWvOsSYB4H9wkkSMMx+gbqXDErAVx6PFAOQEFxt78FhhQnLXCmASi7M5eUjhQMgyC/pZainAYzme02Y2UsuwnG9uo7Lg03JsdUeu8PUo2RHk2uRW7I4NtkcWwHG5Qx+U6V9//i1QSS5rN+K5W9Os60tIPMfNhvjkSAE9y/+Do77H+MvJjTr2w== codespace@codespaces-31f3e9",
+  "existing_vpc_id": "",
+  "existing_subnet_ids": []
+}
