@@ -64,3 +64,6 @@ in order to generate a new ssh key pair:
 ```
 $ ssh-keygen -t rsa -b 4096 -f jenkins-key
 ```
+
+
+[![Your GHA](https://github.com/julsfajardo/terraform-codespaces/actions/workflows/deploy.yml/badge.svg?branch=master&event=pull_request)](https://github.com/julsfajardo/terraform-codespaces/actions/workflows/deploy.yml)
