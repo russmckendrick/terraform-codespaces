@@ -4,21 +4,16 @@ on:
     types: [opened, synchronize]
 
 jobs:
-  your_job_name:
-    name: Trigger Jenkins Job
+  trigger-a-jenkins-job:
     runs-on: ubuntu-latest
     steps:
-      - name: Trigger your-awesome-job-name job
-        uses: toptal/jenkins-job-trigger-action@master
+      - id: triggerjenkinsjob
+        uses: mickeygoussetorg/trigger-jenkins-job@v1
         with:
-          jenkins_url: "http://54.179.173.106:8081/"
-          jenkins_user: "admin"
-          jenkins_token: "11628e4a93549b74b12d7069eef4966054"
-          proxy: ""
-          job_name: "test1"
-          job_params: |
-            {
-              "param_1": "value_1",
-              "param_2": "value_2"
-            }
-          job_timeout: "3600" # Default 30 sec. (optional)
+          jenkins-server:  "${{ secrets.JENKINS_SERVER }}" # URL of the jenkins server. ex: http://myjenkins.acme.com:8080
+          jenkins-job: "mySampleApp" # The name of the jenkins job to run
+          jenkins-username: ${{ secrets.JENKINS_USERNAME }} # user name for accessing jenkins
+          jenkins-pat: ${{ secrets.JENKINS_PAT }} # personal Access token for accessing Jenkins
+          poll-time: 10 # how often (seconds) to poll the jenkins server for results
+          timeout-value: 600 # How long (seconds) to poll before timing out the action
+          verbose: true # true/false - turns on extra logging
