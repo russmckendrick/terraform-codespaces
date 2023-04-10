@@ -74,7 +74,7 @@ resource "aws_key_pair" "key_pair" {
 }
 
 resource "aws_instance" "server" {
-  ami                         = data.aws_ami.nodes.id
+  ami                         = "ami-02b2e78e9b867ffec"
   instance_type               = var.instance_type
   associate_public_ip_address = true
   vpc_security_group_ids      = [aws_security_group.sg.id]
